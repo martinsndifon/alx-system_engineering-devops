@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'Line four is shit' >> iacta
+tail -n 1 iacta > iacta
