@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'Line four is shit' >> iacta | cat iacta
+echo 'Line four is shit' >> iacta
