@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s\n" aa bb cc dd ee ff gg hh ii jj kk ll mm nn pp qq rr ss tt uu vv ww xx yy zz 
+printf "%s\n" {a..z}{a..z} | 
