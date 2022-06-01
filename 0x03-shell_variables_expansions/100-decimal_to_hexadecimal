@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s\n" $((10#$DECIMAL))
+echo $((10#$DECIMAL))
