@@ -1,2 +1,2 @@
 #!/bin/bash
-Find . -empty | rev | cut -d '/' -f 1 | rev
+Find . -empty -print | rev | cut -d / -f 1 | rev
