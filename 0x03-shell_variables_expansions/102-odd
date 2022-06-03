@@ -1,2 +1,2 @@
 #!/bin/bash
-paste -d " " -- | xargs -n 2 | cut -d " " -f 1 
+ls -1 | tr \" ^ | xargs -n 2 | tr ^ \" | cut -d " " -f 1 
