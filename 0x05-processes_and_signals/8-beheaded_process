@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# stops 4-to_infinity_and_beyond process
+# shellcheck disable=SC2009
+
+pid=$( ps aux | grep ./7-highlander | awk '{print $2}' )
+
+for i in $pid
+do
+	kill -n 9 "$i"
+	break
+done
