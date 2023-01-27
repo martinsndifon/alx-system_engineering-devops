@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# deamon process to be managed
+
+i=0
+until [ "$i" -eq 1 ]
+do
+	echo 'I am alive!' >> /tmp/my_process
+	sleep 2
+done
