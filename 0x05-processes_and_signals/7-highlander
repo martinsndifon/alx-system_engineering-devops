@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # An infinite loop with sleep
 
-trap "echo I am invincible!!!" 0 2 9 15
+trap "echo I am invincible!!!" 0 2 15
 
 i=0
 until [ "$i" -eq 1 ]
