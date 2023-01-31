@@ -3,7 +3,7 @@
 
 print ARGV[0].scan(/from:(\+?[a-zA-Z0-9]*)/).join
 print ","
-print ARGV[0].scan(/to:(\+?[a-zA-Z0-9]*)/).join
+print ARGV[0].scan(/to:(\+?\w*)/).join
 print ","
 print ARGV[0].scan(/flags:(\+?[:\-0-9]*)/).join
 print "\n"
