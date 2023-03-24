@@ -1,3 +1,4 @@
+# create a file with permissions using puppet
 node default{
 file{'/tmp/school':
 mode    => '0744'
