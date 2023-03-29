@@ -21,7 +21,7 @@ command => '/usr/bin/echo Hello World! > /var/www/html/index.nginx-debian.html'
 }
 
 exec {'redirect permanently':
-command => '/usr/bin/sed -i "26i\ \tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;i\n\t}" /etc/nginx/sites-available/default'
+command => '/usr/bin/sed -i "48i\ \tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;i\n\t}" /etc/nginx/sites-available/default'
 }
 
 exec {'restart nginx':
