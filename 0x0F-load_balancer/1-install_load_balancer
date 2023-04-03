@@ -5,7 +5,7 @@
 apt update -y
 apt upgrade -y
 apt install haproxy -y
-line="\nfrontend web_frontend\n\tbind*:80\n\tdefault_backend web_backend\nbackend web_backend\n\tbalance roundrobin\n\tserver web01 3.84.255.71:80 check\n\tserver web02 54.236.48.24:80 check"
+line="frontend web_frontend\n bind*:80\n default_backend web_backend\nbackend web_backend\n server web01 3.84.255.71:80 check\n server web02 54.236.48.24:80"
 
 sed -i "$ a $line" /etc/haproxy/haproxy.cfg
 service haproxy restart
