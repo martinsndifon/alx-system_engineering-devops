@@ -15,7 +15,8 @@ sed -i "29i $line1" /etc/nginx/sites-available/default
 line2="\\\terror_page 404 /404.html;"
 sed -i "32i $line2" /etc/nginx/sites-available/default
 
-line3="\\\tadd_header X-Served-By 59398-web-02;"
+q='"'
+line3="\\\tadd_header X-Served-By $q$(hostname)$q;"
 sed -i "58i $line3" /etc/nginx/sites-available/default
 
 service nginx restart
