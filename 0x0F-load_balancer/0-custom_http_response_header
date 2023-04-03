@@ -1,5 +1,5 @@
-#!/bin/bash
-# configure the server with new parameters
+#!/usr/bin/env bash
+# configure the server with new and updated parameters
 
 apt-get update -y && apt-get upgrade -y
 apt-get install nginx -y
