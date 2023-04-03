@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # install and configures HAproxy on lb-01 server
+# sends traffic to web-01 and web-02 using roundrobin algorithm
 
 apt update
 apt upgrade -y
-add-apt-repository ppa:vbernat/haproxy-2.6 -y
-apt-get install haproxy=2.6.\* -y
+apt install haproxy -y
 echo "\nfrontend web_frontend\n\tbind*:80\n\tdefault_backend web_backend" >> /etc/haproxy/haproxy.cfg
 echo "\nbackend web_backend\n\tbalance roundrobin\n\tserver web01 3.84.255.71:80 check\n\tserver web02 54.236.48.24:80 check" >> /etc/haproxy/haproxy.cfg
 
