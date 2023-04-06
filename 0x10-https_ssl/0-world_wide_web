@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # displays information about subdomains
 
-dig_domain(){
+dig_domain() {
 	FULL_DOMAIN=$2.$1
 	SUB_DOMAIN=$2
 	RECORD=$(dig "$FULL_DOMAIN" | awk 'BEGIN{OFS=" ";} /^'$2'/{print $4}')
@@ -12,8 +12,9 @@ dig_domain(){
 domain=$1
 subdomain=$2
 sub=( www lb-01 web-01 web-02 )
+
 validate () {
-    if [[ $subdomain ]]
+    if [[ -z "$subdomain" ]]
     then
         for x in "${sub[@]}"
         do
@@ -23,4 +24,5 @@ validate () {
         dig_domain "$domain" "$subdomain"
     fi
 }
+
 validate
