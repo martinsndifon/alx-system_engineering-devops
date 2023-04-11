@@ -1,0 +1,8 @@
+# What happens when you type https://www.google.com in your browser and press Enter.
+In conclusion, typing “https://www.google.com" in your browser and pressing Enter initiates a complex series of events that enable you to access Google’s website. From DNS resolution to TCP/IP communication, SSL encryption to load balancing, web servers to application servers, and rendering in your browser, various components work seamlessly together to deliver the web content to your screen.
+
+The DNS resolution translates the human-readable URL into an IP address, allowing your computer to establish a connection with the web server. The TCP/IP communication ensures reliable and orderly delivery of data packets between devices. The SSL encryption protects your data during transmission, ensuring confidentiality. Load balancing distributes incoming requests across multiple servers for optimal performance.
+
+Web servers fetch the relevant files and generate the webpage’s content, while application servers handle dynamic content and complex functionalities. The final webpage is rendered in your browser, interpreting HTML markup, applying CSS styles, and executing JavaScript code.
+
+The journey of typing “https://www.google.com" and pressing Enter is a fascinating interplay of various technologies and protocols that work together behind the scenes to provide a seamless web browsing experience. So, the next time you enter a URL in your browser and hit Enter, remember the intricate process that happens in the background to deliver the web page to your device. The behind-the-scenes complexity of loading a web page is a testament to the advancements in technology and infrastructure that enable us to access information and content on the internet with just a few clicks.
