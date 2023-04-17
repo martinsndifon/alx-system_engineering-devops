@@ -1,0 +1,6 @@
+# ufw command used to configure ufw in the server
+
+apt install ufw
+ufw allow 'OpenSSH'
+ufw allow 'Nginx Full'
+ufw enable
