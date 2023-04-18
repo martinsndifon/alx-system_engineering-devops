@@ -4,4 +4,4 @@ sed -i -E 's/#user.+\;/user nginx;/' /etc/nginx/nginx.conf
 sed -i 's/80/8080/' /etc/nginx/sites-enabled/default
 chown -R nginx:nginx /etc/nginx/ /var/run/ /var/log/nginx
 chmod +rw /etc/nginx/nginx.conf
-su --login nginx -c 'service nginx start'
+su -l nginx -c 'service nginx restart'
