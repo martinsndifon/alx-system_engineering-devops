@@ -13,14 +13,14 @@ def main():
     if res.status_code == 200:
         res = res.json()
         name = requests.get(url).json().get('name')
-        completed_tasks = [val for val in res if val["completed"]]
+        completed_tasks = [val for val in res if val.get('completed')]
         length = len(completed_tasks)
         total = len(res)
         print('Employee {} is done with tasks({}/{}):'.format(
             name, length, total))
 
         for task in completed_tasks:
-            print('\t {}'.format(task['title']))
+            print('\t {}'.format(task.get('title')))
     return 0
 
 
