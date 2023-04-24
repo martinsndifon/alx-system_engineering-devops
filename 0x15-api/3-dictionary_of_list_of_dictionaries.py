@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """Uses a REST API to get and return some information"""
-import requests
 import json
-
+import requests
 
 def main():
     """Save all information about a user's tasks to a json file"""

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Uses a REST API to get and return some information"""
-import requests
 import csv
+import requests
 from sys import argv
 
 
