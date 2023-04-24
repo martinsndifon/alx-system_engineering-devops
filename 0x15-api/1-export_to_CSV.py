@@ -1,33 +1,28 @@
 #!/usr/bin/python3
-"""Uses a REST API to get and return some information"""
-import csv
+"""Script to access a REST API for TODO lists of employees"""
+
 import requests
+import sys
 from sys import argv
 
 
-def main():
-    """Save information about a user TODO list progress to a CSV file"""
-    url = 'https://jsonplaceholder.typicode.com/users/{}'.format(argv[1])
-    todo_url = '{}/todos'.format(url)
-    res = requests.get(todo_url)
-
-    if res.status_code == 200:
-        res = res.json()
-        name = requests.get(url).json().get('username')
-        filename = "{}.csv".format(argv[1])
-
-        with open(filename, 'w', encoding='utf8') as csv_file:
-            csv_file = csv.writer(
-                    csv_file, delimiter=',',
-                    quoting=csv.QUOTE_ALL, quotechar='"')
-            for task in res:
-                csv_file.writerow(
-                        [
-                            task['userId'], name,
-                            task['completed'], task['title']])
-
-    return 0
-
-
 if __name__ == '__main__':
-    main()
+    baseUrl = "https://jsonplaceholder.typicode.com/users"
+    employeeId = sys.argv[1]
+    url = baseUrl + "/" + employeeId
+
+    # Get employee name
+    response = requests.get(url)
+    username = response.json().get('username')
+
+    # Get data on the ToDo of the employee
+    todoUrl = url + "/todos"
+    response = requests.get(todoUrl)
+    tasks = response.json()
+
+    # CSV format
+    with open('{}.csv'.format(employeeId), 'w') as file:
+        for task in tasks:
+            file.write('"{}","{}","{}","{}"\n'
+                       .format(employeeId, username, task.get('completed'),
+                               task.get('title')))
