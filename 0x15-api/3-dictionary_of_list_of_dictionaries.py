@@ -3,6 +3,7 @@
 import json
 import requests
 
+
 def main():
     """Save all information about a user's tasks to a json file"""
     url = 'https://jsonplaceholder.typicode.com/users/'
