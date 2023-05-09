@@ -34,4 +34,5 @@ def recurse(subreddit, count=0, after=None, hot_list=[]):
         hot_list.append(post["data"]["title"])
 
     # Recursively call the function to retrieve the next 100 hot articles
-    return recurse(subreddit, count=count+100, after=data["data"]["after"], hot_list=hot_list)
+    return recurse(subreddit, count=count+100, after=data["data"]["after"],
+                   hot_list=hot_list)
