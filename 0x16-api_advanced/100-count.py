@@ -17,7 +17,6 @@ def count_words(subreddit, word_list, after="", count=[]):
                            headers={"user-agent": "Mozilla/5.0"},
                            allow_redirects=False)
 
-
     if request.status_code == 200:
         data = request.json()
 
