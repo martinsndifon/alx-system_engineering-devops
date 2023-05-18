@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Gracefully reload gunicorn worker processes
-pid=$(ps -C gunicorn fch -o pid | head -n 1)
+pid=$(pgrep -f "gunicorn")
 kill -HUP "$pid"
