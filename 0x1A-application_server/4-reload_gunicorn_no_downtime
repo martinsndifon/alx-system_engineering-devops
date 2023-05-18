@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # Gracefully reload gunicorn worker processes
 
-pid=$(pgrep gunicorn | head -n 1)
+# pid=$(pgrep gunicorn | head -n 1)
 # pid=$(pgrep gunicorn | awk 'NR==1{print $1}')
 # pid=$(ps -auxf | grep gunicorn | awk 'NR == 2 {print $2}')
+# kill -HUP "$pid" # this kills using the pid of a gunicorn process parent
 
-kill -HUP "$pid"
+pkill -HUP gunicorn
